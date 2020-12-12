@@ -1,0 +1,11 @@
+@import './Variables.scss';
+@import './Media.scss';
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+body{
+  background-color: #cdcdcd;
+}
+.info-button{
+  padding: $padding-button-info;
+  font: $font-size-button-info;
+}
