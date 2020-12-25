@@ -1,10 +1,13 @@
 
 
 @media only screen and (max-width:500px){
-  .container{
-    background-color: red;
-  }
-  .grid-character{
-    background-color: blue;
+  // .container{
+  //   background-color: red;
+  // }
+  // .grid-character{
+  //   background-color: blue;
+  // }
+  .navbar-brand img{
+    max-width: 100%;
   }
 }

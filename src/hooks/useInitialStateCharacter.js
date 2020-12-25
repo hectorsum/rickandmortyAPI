@@ -1,18 +1,18 @@
 import {useState,useEffect} from 'react';
-import {getEpisode} from '../helpers/getEpisode';
+import {getCharacter} from '../helpers/getCharacter';
 
-const useInitialState = (id) =>{
+const useInitialState = () =>{
   const [state, setState] = useState({
     data:[],
     loading:true})
   
   useEffect(()=>{
-    getEpisode(id)
+    getCharacter()
     .then(data => {
       setState({data,
                 loading:false})
     })
-  },[id]);
+  },[]);
   return state;
 };
 

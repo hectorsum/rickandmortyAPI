@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+h5{
+  font-family: 'Pacifico', cursive;
+}
+.card{
+  border: none;
+}
+.card img{
+  height: 100%;
+  // background-size: cover;
+  // background-position: center;
+  border-radius: 0;
+}
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: transparent !important;
+  & h5{
+    font-size: 26px;
+  }
+  & a{
+    color: transparent !important;
+  }
+}
+.card-body:hover{
+  transition: all 0.5s ease;
+  color: white !important;
+  background-color: rgba(0,0,0,0.9) !important;
+  & h5{
+    font-size: 26px;
+  }
+  & a{
+    color: orangered !important;
+  }
+}
+.img-darken{
+  transition: all 0.5s ease;
+  color: white !important;
+  background-color: rgba(0,0,0,0.8) !important;
+}

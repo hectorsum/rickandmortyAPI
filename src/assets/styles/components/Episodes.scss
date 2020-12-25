@@ -1,0 +1,65 @@
+$point: #00AEC6;
+$point-light: darken($point, 5%);
+$card-shadow: -15px -15px 0px -6px $point-light;
+$card_round: 10px;
+$padding-season-selector: 8px;
+$width-season-selector: 150px;
+.season-selector{
+  padding: $padding-season-selector;
+  width: $width-season-selector;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 600;
+}
+
+.episodes-wrapper{
+  & .info-card{
+    padding: 3px;
+    height: auto;
+    width: 300px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    -webkit-box-shadow: $card-shadow;  
+    box-shadow: $card-shadow;
+    border-radius: $card_round;
+    
+    
+    -webkit-animation-name: shadow-show; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+    animation-name: shadow-show;
+    animation-duration: 1.5s;
+    
+    -webkit-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
+    transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000); /* custom */
+
+    & h3{
+      text-align: center;
+      font-weight: 600;
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+    & hr{
+      display: block;
+      border: none;
+      height: 3px;
+      background-color: $point;
+      margin: 0px;
+      width: 80%;
+      -webkit-animation-name: line-show; /* Safari 4.0 - 8.0 */
+      -webkit-animation-duration: 0.3s; /* Safari 4.0 - 8.0 */
+      animation-name: line-show;
+      animation-duration: 0.3s;
+      -webkit-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
+      -o-transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000);
+      transition-timing-function: cubic-bezier(0.795, 0.000, 0.165, 1.000); /* custom */
+    }
+  }
+  & .info-card:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: 0.5s ease all;
+  }
+}

@@ -1,19 +1,19 @@
 import {useState,useEffect} from 'react';
-import {getEpisode} from '../helpers/getEpisode';
+import {getFullEpisodes} from '../helpers/getFullEpisodes';
 
-const useInitialState = (id) =>{
+const useInitialStateAllEpisodes = () =>{
   const [state, setState] = useState({
     data:[],
     loading:true})
   
   useEffect(()=>{
-    getEpisode(id)
+    getFullEpisodes()
     .then(data => {
       setState({data,
                 loading:false})
     })
-  },[id]);
+  },[]);
   return state;
 };
 
-export default useInitialState;
+export default useInitialStateAllEpisodes;
