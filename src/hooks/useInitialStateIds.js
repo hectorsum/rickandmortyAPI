@@ -1,13 +1,13 @@
 import {useState,useEffect} from 'react';
-import {getEpisode} from '../helpers/getEpisode';
+import {getCharacter} from '../helpers/getCharacter';
 
-const useInitialState = (id) =>{
+const useInitialStateIds = (id) =>{
   const [state, setState] = useState({
     data:[],
     loading:true})
   
   useEffect(()=>{
-    getEpisode(id)
+    getCharacter(id)
     .then(data => {
       setState({data,
                 loading:false})
@@ -16,4 +16,4 @@ const useInitialState = (id) =>{
   return state;
 };
 
-export default useInitialState;
+export default useInitialStateIds;

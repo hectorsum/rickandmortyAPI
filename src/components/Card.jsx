@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const Card = (props) =>{
   const {id,name,image} = props;
-  console.log(id,name,image);
   return(
     <div className="card col-sm-6 col-md-4 col-lg-3 col-xl-2 m-2 p-0">
       <img src={image} className="card-img-top" alt={name}/>

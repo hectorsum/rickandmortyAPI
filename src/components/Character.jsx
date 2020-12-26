@@ -1,6 +1,6 @@
 import React from 'react'
 import Card from './Card';
-import useInitialStateCharacter from '../hooks/useInitialStateCharacter';
+import useInitialStateCharacter from '../hooks/useInitialStateAllCharacters';
 
 const Character = () =>{
   const { data } = useInitialStateCharacter();

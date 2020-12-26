@@ -1,19 +1,16 @@
-export const getCharacter = async() => {
-  const API = `https://rickandmortyapi.com/api/character`;
+export const getCharacter = async(id) => {
+  const API = `https://rickandmortyapi.com/api/character/${id}`;
   const data = await fetch(API)
                     .then(res => res.json())
                     .then(res_data => res_data)
-  const {results} = data
-  const fullData = results.map(item =>{
-    return {
-      id: item.id,
-      name: item.name,
-      status: item.status,
-      species: item.species,
-      gender: item.gender,
-      location: item.location.name,
-      image: item.image
-    }
-  })
-  return fullData
+  console.log(data);
+  const {name,status,species,gender,location:{name:name_location},image} = data;
+  return {
+    name,
+    status,
+    species,
+    gender,
+    name_location,
+    image
+  }
 }

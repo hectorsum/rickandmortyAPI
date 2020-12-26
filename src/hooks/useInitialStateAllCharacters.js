@@ -1,18 +1,18 @@
 import {useState,useEffect} from 'react';
-import {getCharacter} from '../helpers/getCharacter';
+import {getAllCharacters} from '../helpers/getAllCharacters';
 
-const useInitialState = (id) =>{
+const useInitialState = () =>{
   const [state, setState] = useState({
     data:[],
     loading:true})
   
   useEffect(()=>{
-    getCharacter(id)
+    getAllCharacters()
     .then(data => {
       setState({data,
                 loading:false})
     })
-  },[id]);
+  },[]);
   return state;
 };
 
