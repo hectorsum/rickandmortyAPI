@@ -11,7 +11,7 @@ export const EpisodeInfo = () => {
   // const { name,air_date,episode,characters } = data;
   const { fullIds } = data
   console.log(fullIds);
-  const character_data = useInitialStateIds(fullIds);
+  // const character_data = useInitialStateIds(fullIds);
   
   return (
     <div className="container">
