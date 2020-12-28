@@ -1,5 +1,3 @@
-import { getCharacter } from "./getCharacter";
-
 export const getEpisode = async(id) => {
   const API = `https://rickandmortyapi.com/api/episode/${id}`
   const data = await fetch(API)
