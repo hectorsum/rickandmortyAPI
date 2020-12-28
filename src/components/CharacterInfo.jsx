@@ -16,9 +16,9 @@ export const CharacterInfo = () => {
       <hr/>
       { loading && <h1 className="animate__animated animate__flash">Loading..</h1> }
       <div className="d-flex info-wrapper">
-        <img src={image} alt={name}/>
+        <img src={image} alt={name} className="animate__animated animate__rollIn"/>
         <div className="w-100">
-          <div className="info-character d-flex flex-column justify-content-center ">
+          <div className="info-character d-flex flex-column justify-content-center animate__animated animate__zoomIn">
             <span><img src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png" alt={name_location}/> <b>Location:</b> {name_location}</span>
             <span><img src="https://img.icons8.com/material/24/000000/connection-status-off.png" alt={status}/> <b>Status:</b> {status}</span>
             <span><img src="https://img.icons8.com/material/24/000000/transgender.png" alt={gender}/> <b>Gender:</b> {gender}</span>

@@ -18,7 +18,7 @@ export const Episode = () => {
           <option value="S02">Season 02</option>
         </select>
         <hr/>
-        <div className="episodes-wrapper row d-flex justify-content-center mt-4 mb-4">
+        <div className="episodes-wrapper row d-flex justify-content-center mt-4 mb-4 animate__animated animate__jackInTheBox">
         {
           data.map(episode => (
             episode.episode.includes(season) && (
