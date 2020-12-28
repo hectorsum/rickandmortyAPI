@@ -8,7 +8,7 @@ const Card = (props) =>{
       <img src={image} className="card-img-top" alt={name}/>
       <div className="card-body text-center">
         <h5 className="card-title">{name}</h5>
-        <Link to={`./characters/${id}`}>
+        <Link to={`/characters/${id}`}>
           More...
         </Link>
       </div>
